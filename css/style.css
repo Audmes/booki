@@ -47,6 +47,7 @@ p {
 .main-container {
     width: 100%;
     max-width: 90rem; /* 1440 px */
+    min-width: 20rem; /* 320px */
     padding: 0 3.13rem; /* 50px */
     margin: 0 auto;
     /* box-sizing: border-box; */
@@ -362,7 +363,7 @@ header nav .active {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 100%;
+    width: auto;
     text-align: center;
 }
 
@@ -634,20 +635,9 @@ footer a:hover {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-/* Large devices (tablets, less/equal than 1024px) */
-@media all and (max-width: 1024px) {
-    .hebergements-cards .card-content {
-        display: flex;
-        flex-direction: column;
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        min-height: 100%;
-        height: 5rem; /* 80px */
-    }
- }
 
-/* Medium devices (tablets, less/equal than 769px) */
-@media all and (min-width:427px) and (max-width: 769px) {
+/* Medium devices (tablets, 769px to 1024px) */
+@media all and (min-width:48rem) and (max-width: 64rem) {
     .main-container {
         width: 100%;
         max-width: 90rem; /* 1440px */
@@ -661,6 +651,7 @@ footer a:hover {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: left;
         width: 100%;
         gap: 0.63rem; /* 10px */
         margin-top: 1.25rem; /* 20px */
@@ -674,6 +665,15 @@ footer a:hover {
 
     .hebergements {
         width: 100%;
+    }
+
+    .hebergements-cards .card-content {
+        display: flex;
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        min-height: 100%;
+        height: 5rem; /* 80px */
     }
 
     .populaires {
@@ -723,13 +723,10 @@ footer a:hover {
 }
 
 /* Small devices (mobile, less/equal than 426px) */
-@media all and (max-width: 26.63rem) { /* 426px */
+@media all and (max-width: 47.99rem) { /* 767px */
     .main-container {
-        width: 100%;
-        max-width: 90rem; /* 1440px */
-        padding: 0; /* 50px */
-        margin: 0 auto;
-        /* box-sizing: border-box; */
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .col-container,
@@ -789,6 +786,9 @@ footer a:hover {
         display: flex;
     }
 
+    .search-bar form input {
+        width: 100%;
+    }
     .search-filter-bar .col-middle {
         -ms-flex-align: start;
         -webkit-box-align: start;
