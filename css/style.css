@@ -65,6 +65,10 @@ p {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .card img {
     object-fit: cover;
 }
