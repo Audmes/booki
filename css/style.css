@@ -318,15 +318,17 @@ header nav li a {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    border-top: 2px solid transparent;
 }
   
 header nav li a:hover:not(.active) {
     color: var(--main-color);
+    border-top: 2px solid var(--main-color);
 }
   
 header nav .active {
     color: var(--main-color);
-    background: transparent !important;
+    /* background: transparent !important; */
     border-top: 2px solid var(--main-color);
 }
 
@@ -765,6 +767,16 @@ footer a:hover {
   
     header nav li {
         width: 100%;
+    }
+
+    header nav li a {
+        border-top: 0;
+    }
+
+    header nav li a:hover:not(.active) {
+        color: var(--main-color);
+        border-top: 0;
+        border-bottom: 2px solid var(--main-color);
     }
 
     header nav li a:not(.active) {
