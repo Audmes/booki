@@ -34,7 +34,7 @@ footer {
 
 p {
     color: var(--font-color);
-    font-size: 1rem; /* 16px */
+    font-size: 1em; /* 16px */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -295,13 +295,13 @@ p {
 .m-b-35 { margin-bottom: 2.19rem; } /* 35px */
 
 /****** Header ***********/
-.logo { padding: 1.88rem 0; } /* 30px 0 */
+.logo { padding: 1.88em 0; } /* 30px 0 */
 
 /****** Navigation ***********/
 header nav ul {
     list-style-type: none;
     display: flex;
-    padding: 0px;
+    padding: 0;
     flex-direction: row;
     justify-content: end;
     align-items: center;
@@ -312,9 +312,9 @@ header nav li a {
     display: block;
     color: var(--font-color);
     text-align: center;
-    padding: 0.88rem 1rem; /* 14px 16px */
+    padding: 0.88em 1em; /* 14px 16px */
     text-decoration: none;
-    font-size: 1rem; /* 16px */ 
+    font-size: 1em; /* 16px */ 
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -337,13 +337,14 @@ header nav .active {
     width: 100%;
 }
 
+/* Search-bar */
 .search-bar form {
     display: flex;
     width: 100%;
-    max-width: 23.56rem; /* 377px */
-    height: 3.06rem; /* 49px */
+    max-width: 23.56em; /* 377px */
+    height: 3.06em; /* 49px */
     align-items: center;
-    gap: 1.5rem; /* 24px */
+    gap: 1.5em; /* 24px */
     border-radius: 0.94; /* 15px */
     border: 1px solid var(--grey, #F2F2F2);
     background: var(--white, #FFF); 
@@ -365,7 +366,7 @@ header nav .active {
 .search-bar form input {
     border: 1px solid var(--grey, #F2F2F2);
     color: var(--font-color);
-    font-size: 1.13rem; /* 18px */
+    font-size: 1.13em; /* 18px */
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -429,6 +430,12 @@ header nav .active {
     border: 1px solid var(--main-color);
     background: var(--main-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Search-filter-bar */
+
+search-filter-bar {
+    width: 100%;
 }
 
 .search-filter-bar-title {
@@ -594,15 +601,15 @@ header nav .active {
 
 .activities-cards .card {
     /* display: flex; */
-    margin-top: 2.06rem; /* 33px */
+    margin-top: 2.06em; /* 33px */
 }
 
 .activities-cards .card-content {
-    height: 4.38rem; /* 70px */
+    height: 4.38em; /* 70px */
 }
 
 .activities-cards .card-title {
-    padding: 1.25rem 1.19rem; /* 20px 19px */
+    padding: 1.25em 1.19em; /* 20px 19px */
 }
 
 .activities-cards img {
@@ -646,8 +653,8 @@ footer a:hover {
 @media all and (min-width:48rem) and (max-width: 64rem) {
     .main-container {
         width: 100%;
-        max-width: 90rem; /* 1440px */
-        padding: 0 3.13rem; /* 0 50px */
+        max-width: 90em; /* 1440px */
+        padding: 0 3.13em; /* 0 50px */
         margin: 0 auto;
         /* box-sizing: border-box; */
     }
@@ -659,7 +666,7 @@ footer a:hover {
         flex-direction: row;
         justify-content: left;
         width: 100%;
-        gap: 0.63rem; /* 10px */
+        gap: 0.63em; /* 10px */
         margin-top: 1.25rem; /* 20px */
     }
 
@@ -679,18 +686,18 @@ footer a:hover {
         -ms-flex-pack: distribute;
         justify-content: space-around;
         min-height: 100%;
-        height: 5rem; /* 80px */
+        height: 5em; /* 80px */
     }
 
     .populaires {
         width: 100%;
-        margin-top: 3.13rem; /* 50px */
+        margin-top: 3.13em; /* 50px */
     }
 
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        gap: 1.25rem; /* 20px */
+        gap: 1.25em; /* 20px */
     }
 
     .populaires-cards .card { 
@@ -699,12 +706,12 @@ footer a:hover {
     }
 
     .populaires-cards img {
-        height: 9.13rem; /* 146px */
+        height: 9.13em; /* 146px */
     }
 
     /* activities */
     .activities section {
-        gap: 1.25rem; /* 20px */
+        gap: 1.25em; /* 20px */
     }
 
     .activities-cards {
@@ -720,7 +727,7 @@ footer a:hover {
     }
 
     .activities-cards img {
-        height: 12.5rem; /* 200px */
+        height: 12.5em; /* 200px */
     }
 
     .activities-cards .card-content {
@@ -728,11 +735,30 @@ footer a:hover {
     }
 }
 
-/* Small devices (mobile, less/equal than 426px) */
-@media all and (max-width: 47.99rem) { /* 767px */
+/* Small devices (mobile, less/equal than 767px) */
+@media all and (max-width: 47.99rem) {
     .main-container {
         padding: 0;
+        margin: 0;
         box-sizing: border-box;
+    }
+
+    .row {
+        /* box-sizing: border-box; */
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        -ms-flex: 0 1 auto;
+        -webkit-box-flex: 0;
+        flex: 0 1 auto;
+        -ms-flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .col-container,
@@ -752,10 +778,11 @@ footer a:hover {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
         max-width: 100%;
+        padding: 0;
     }
 
     .logo {
-        padding: 1.88rem 0; /* 30px 0 */
+        padding: 1.88em 0; /* 30px 0 */
         text-align: center;
     }
 
@@ -780,12 +807,12 @@ footer a:hover {
     }
 
     header nav li a:not(.active) {
-        border-bottom: 0.13rem solid var(--main-bg-color); /* 2px */
+        border-bottom: 2px solid var(--main-bg-color); 
     }
 
     header nav .active {
         border-top: 0;
-        border-bottom: 0.13rem solid var(--main-color); /* 2px */
+        border-bottom: 2px solid var(--main-color); 
     }
 
     /* Search Hebergements */
