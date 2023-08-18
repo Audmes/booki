@@ -345,7 +345,7 @@ header nav .active {
     height: 3.06em; /* 49px */
     align-items: center;
     gap: 1.5em; /* 24px */
-    border-radius: 0.94; /* 15px */
+    border-radius: 0.94em; /* 15px */
     border: 1px solid var(--grey, #F2F2F2);
     background: var(--white, #FFF); 
 }
@@ -859,7 +859,6 @@ footer a:hover {
     
     /* hebergements-and-populaires */
     .hebergements-and-populaires section {
-        /* background-color: var(--main-color); */
         background-color: var(--white);
         border-radius: 0;
         padding: 1.25rem; /* 20px */
