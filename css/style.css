@@ -65,12 +65,17 @@ p {
     text-decoration: none;
 }
 
+.card a:visited {
+    color: var(--font-color);
+}
+
 .card img {
     object-fit: cover;
 }
 
 .card-title {
     font-size: 1em; /* 16px */
+    color: var(--font-color);
 }
 
 .euro {
@@ -457,6 +462,14 @@ header nav .active {
 
 .hebergements-cards .card {
     margin-top: 2.06rem; /* 33px */
+}
+
+.hebergements-cards .card a {
+    text-decoration: none;
+}
+
+.hebergements-cards .card a:visited {
+    color: var(--font-color);
 }
 
 .hebergements-cards img {
